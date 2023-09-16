@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap");
+
+/* css variable */
+:root {
+  --primary-color: #fffefe;
+  --secondary-color: #6301ee;
+  --back-color: #000000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.myContent {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* nav start */
+.top-nav {
+  background-color: var(--secondary-color);
+  padding: 4px 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+nav .middel-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  transition: all 0.5s ease;
+}
+
+nav .middel-nav .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .middel-nav .left h1 {
+  font-size: 2rem;
+  font-style: italic;
+  margin-right: 3rem;
+  font-weight: 900;
+}
+
+nav .input-box {
+  position: relative;
+}
+
+nav .input-box input {
+  width: 400px;
+  padding: 0.7rem;
+  border-radius: 2rem;
+}
+
+nav .input-box i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+nav .middel-nav .search-card {
+  display: none;
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+nav .input-box:focus-within .search-card {
+  display: block;
+}
+
+nav .res-search {
+  display: none;
+}
+
+nav .middel-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+nav .middel-nav-item .link-btn {
+  position: relative;
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .middel-nav .login-card {
+  padding: 10px 2rem;
+}
+nav .middel-nav .login-card a {
+  color: var(--back-color);
+  text-decoration: none;
+}
+
+nav .sell-btn button {
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  color: var(--primary-color);
+}
+nav .sell-btn button:hover {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+.nav,
+nav {
+  padding: 15px 0;
+}
+
+nav .dropdown .dropdown-menu {
+  display: none;
+}
+
+.nav a {
+  color: var(--back-color);
+}
+
+nav .dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125rem;
+  transition: all 0.5s;
+  color: var(--back-color);
+}
+nav .dropend:hover > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: block;
+  margin-top: 0.125rem;
+  color: var(--back-color);
+}
+
+nav .my-nav-link a:hover {
+  color: gold;
+}
+
+nav.scrolled {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  transition: all 0.5s;
+  z-index: 100;
+}
+nav.scrolled .nav {
+  display: none;
+}
+nav.scrolled .top-nav {
+  display: none;
+}
+
+/* image slider */
+.img-slider img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+/* hot topic */
+.hot-topic {
+  padding: 5rem 0;
+}
+.hot-topic h2 {
+  font-weight: 900;
+}
+.hot-topic h2 span {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.hot-topic .hot-now {
+  padding: 2rem 0;
+}
+.hot-topic .hot-now .heading {
+  border-bottom: 4px solid var(--secondary-color);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.hot-topic .hot-now .cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hot-topic .hot-now .cards .card {
+  width: 280px;
+  border-radius: 1rem;
+}
+.hot-topic .hot-now .cards .card img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.hot-topic .hot-now .card .card-base {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: gold;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+.hot-topic .hot-now .card h3 {
+  font-size: 1.2rem;
+}
+.hot-topic .hot-now .card p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Enthusiasm section */
+.Enthusiasm {
+  padding: 2rem 0;
+  background-color: var(--secondary-color);
+}
+.Enthusiasm h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.Enthusiasm .bttom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* responsive card */
+@media screen and (max-width: 1230px) {
+  .hot-topic h2 {
+    text-align: center;
+  }
+  .hot-topic .hot-now .heading {
+    display: block;
+    text-align: center;
+    width: 150px;
+    margin: 1rem auto;
+  }
+  .hot-topic .hot-now .cards {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .hot-topic .hot-now .cards {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  nav .res-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .input-box {
+    display: none;
+  }
+  nav .res-input-box {
+    position: relative;
+    display: block;
+    margin: 1rem;
+    flex: 1;
+  }
+
+  nav .res-input-box input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 2rem;
+  }
+
+  nav .res-input-box i {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  nav .res-input-box .search-card {
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    margin-top: 5px;
+    z-index: 10;
+  }
+
+  nav .res-input-box:focus-within .search-card {
+    display: block;
+  }
+
+  .nav {
+    display: none !important;
+  }
+}
